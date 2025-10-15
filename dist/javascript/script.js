@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("teamForm").addEventListener("submit", function(event) {
+    document.getElementById("team-form").addEventListener("submit", function(event) {
     event.preventDefault();
     });
     let submit = document.getElementById("submit");
@@ -20,18 +20,22 @@ function myLineUp() {
     console.log("Date: " + date);
     if(players.length < 1) {
         console.log("Players: No players selected!");
-        output = "Status: " + status + "<br>Date: " + date + "<br>Players: No players selected!";
+        output = "<b>Status:</b> " + status + "<br><b>Date:</b> " + date + "<br><b>Players:</b> No players selected!";
     }
     else {
         console.log("Players: " + players.join(", "));
-        output = "Status: " + status + "<br>Date: " + date + "<br>Players: " + players.join(", ");
+        output = "<b>Status:</b> " + status + "<br><b>Date:</b> " + date + "<br><b>Players:</b> " + players.join(", ");
     }
 
     if (document.querySelector('p[name="results"]') === null) {
         const results = document.createElement("p");
+        const resultContainer = document.getElementById("result-container");
         results.setAttribute("name", "results");
         results.innerHTML = output;
-        document.body.appendChild(results);
+        resultContainer.style.height = "300px";
+        resultContainer.style.width = "50vw";
+        resultContainer.style.border = "5px solid #9d9d9d";
+        setTimeout(() => {resultContainer.appendChild(results);}, 1000);
     }
     else {
         const results = document.querySelector('p[name="results"]');
