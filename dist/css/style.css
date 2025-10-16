@@ -1,31 +1,7 @@
 h1 {
-  font-size: 20pt;
+  font-size: 1.9vw;
   color: white;
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-th, td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-th {
-  background-color: #f2f2f2;
-  font-weight: bold;
-}
-
-tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-tbody tr:hover {
-  background-color: #e9e9e9;
+  line-height: 26px;
 }
 
 legend {
@@ -33,17 +9,18 @@ legend {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-p[name="results"] {
-  font-size: 28px;
-  width: 300px;
-  color: white;
-  margin-top: 10%;
+#date {
+  border-radius: 5px;
+  background-color: #eba61bb0;
+  border: 2px solid #86691f;
 }
 
-label[for="date"] {
-  margin-right: 5px;
-  font-size: 1.2em;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+#date:hover {
+  border: 2px solid #ffeeda;
+}
+
+#date option:nth-child(2n) {
+  background-color: #ffd988b0;
 }
 
 #form-title {
@@ -52,11 +29,13 @@ label[for="date"] {
   grid-area: head-form;
   background-color: #d28383;
   align-content: center;
-  width: fit-content;
+  width: 13vw;
+  height: 9vh;
   padding: 0 5px 0 5px;
   border-radius: 2px 20px 0 0;
-  top: 28%;
   z-index: 2;
+  top: -18.5%;
+  left: -0.6%;
 }
 
 #form-container{
@@ -64,14 +43,20 @@ label[for="date"] {
   border: 4px solid #c57b7bc5;
   border-radius: 2px 20px 2px 20px;
   grid-area: form;
-  width: 600px;
+  width: 39vw;
+  height: 50vh;
   align-content: center;
   justify-content: center;
+  justify-self: center;
+  align-self: center;
+  position: relative;
+  margin: 20%;
 }
 
 #team-form {
   display: flex;
-  width: 550px;
+  width: 39vw;
+  height: 53vh;
   flex-direction: column;
   justify-content: center;
   align-content: center;
@@ -80,51 +65,87 @@ label[for="date"] {
 }
 
 #results-title {
-  grid-area: head-results;
-  width: 38%;
-  height: 65%;
-  color: white;
-  background-color: black;
-  border: 5px solid #9d9d9d;
-  padding-left: 2%;
+  display: flex;
+  background-color: #7a7a7a;
+  align-content: center;
+  justify-content: center;
+  justify-self: center;
+  position: absolute;
+  width: 15vw;
+  height: 9vh;
+  padding: 0 5px 0 5px;
+  border-radius: 20px 20px 0 0;
+  top: -10%;
+  z-index: 2;
+  box-shadow: 0 3px 3px #505050;
 }
 
 #result-container {
   display: flex;
   grid-area: results;
-  width: 0;
-  height: 0;
-  background-color: black;
-  border: 0px solid #9d9d9d;
+  background-color: #c6b86f;
+  border: 4px solid #a48440;
+  border-radius: 10px;
+  width: 39vw;
+  height: 50vh;
+  align-content: center;
+  justify-content: center;
+  margin: 20% auto 20% auto;
+  position: relative;
+  box-shadow: 0 5px 4px #505050;
+}
+
+#result-paper {
+  display: flex;
+  background-color: #e9e9e9;
+  width: 35vw;
+  height: 49vh;
   justify-content: center;
   align-content: center;
-  transition: all 500ms ease-in-out;
+  box-shadow: 0 5px 2px #7a7a7a;
+}
+
+#players {
+  flex-direction: column;
+  height: 23vh;
+}
+
+#status {
+  flex-direction: row;
+  height: 8vh;
 }
 
 #players, #status {
   display: flex;
-  width: 550px;
+  width: 35.5vw;
   border: 3px solid #6b6b6b;
   border-radius: 2px 20px 2px 20px;
   margin: -30px 4vw -25px auto;
   background-color: #ffffff;
 }
 
-#players {
-  flex-direction: column;
-}
-
-#status {
-  flex-direction: row;
-}
-
 #submit {
   cursor: pointer;
   background-color: #c57b7bc5;
-  width: 100px;
-  height: 40px;
+  border-radius: 2px 20px 2px 20px;
+  width: 6.5vw;
+  height: 5.4vh;
   color: white;
   border: 2px solid #975d5dc5
+}
+
+#submit:hover {
+  cursor: pointer;
+  background-color: #fdb05fc5;
+  border-radius: 2px 20px 2px 20px;
+  width: 6.5vw;
+  height: 5.4vh;
+  color: white;
+  border: 2px solid #8e7a1fc5
+}
+
+#submit-container {
+  margin-bottom: 30px;
 }
 
 #date-container, #submit-container {
@@ -133,22 +154,15 @@ label[for="date"] {
   margin-top: 5px;
 }
 
-#submit-container {
-  margin-bottom: 30px;
-}
-
 #grid-container {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-areas: 
-    "head-form head-results"
     "form results";
   align-content: center;
   justify-content: center;
   width: 100%;
   height: 100%;
-  grid-template-rows: 20% 80%;
-  position: relative;
 }
 
 .status-row {
@@ -169,6 +183,21 @@ label[for="date"] {
 
 .player-row label, .player-row input[type="checkbox"] {
   cursor: pointer;
+}
+
+p[name="results"] {
+  font-size: 2vw;
+  width: 20vw;
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: #d277ab;
+  align-self: center;
+}
+
+label[for="date"] {
+  margin-right: 5px;
+  font-size: 1.2em;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 input[type="checkbox"] {
@@ -206,7 +235,6 @@ input[type="checkbox"]:hover+ label::before {
   line-height: 16px;
   vertical-align: middle;
 }
-
 
 input[type="radio"] {
   appearance: none;
