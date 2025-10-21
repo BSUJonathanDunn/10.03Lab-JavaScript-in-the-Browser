@@ -1,4 +1,5 @@
 
+//Prevents submit button from resetting page and the event handler for the submit button
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("team-form").addEventListener("submit", function(event) {
     event.preventDefault();
@@ -8,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
     submit.addEventListener("click", myLineUp);
 });
 
+//Function to extract data, create string of that data and show it to the end-user
 function myLineUp() {
     console.clear();
     const status = document.querySelector('input[name="status"]:checked').value;

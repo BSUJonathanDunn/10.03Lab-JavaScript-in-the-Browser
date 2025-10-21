@@ -1,3 +1,7 @@
+  /***********************/
+ /***General Selectors***/
+/***********************/
+
 h1 {
   font-size: 1.9vw;
   color: white;
@@ -8,6 +12,17 @@ legend {
   font-size: 14pt;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
+  /***********************/
+ /******ID Selectors*****/
+/***********************/
+
+#references {
+  font-size: 5pt;
+  margin: 0 auto 0 auto;
+}
+
+/****Drop-down box for dates****/
 
 #date {
   border-radius: 5px;
@@ -22,6 +37,8 @@ legend {
 #date option:nth-child(2n) {
   background-color: #ffd988b0;
 }
+
+/****Styles for form element****/
 
 #form-title {
   display: flex;
@@ -64,6 +81,8 @@ legend {
   z-index: 0;
 }
 
+/****Styles for results container****/
+
 #results-title {
   display: flex;
   background-color: #7a7a7a;
@@ -105,6 +124,8 @@ legend {
   box-shadow: 0 5px 2px #7a7a7a;
 }
 
+/*****Individual containers on the form container*****/
+
 #players {
   flex-direction: column;
   height: 23vh;
@@ -123,6 +144,8 @@ legend {
   margin: -30px 4vw -25px auto;
   background-color: #ffffff;
 }
+
+/*****Button Styles*****/
 
 #submit {
   cursor: pointer;
@@ -154,6 +177,8 @@ legend {
   margin-top: 5px;
 }
 
+/****Main grid containing both containers*****/
+
 #grid-container {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -164,6 +189,12 @@ legend {
   width: 100%;
   height: 100%;
 }
+
+  /************************/
+ /*****Class Selectors****/
+/************************/
+
+/****Form Containers****/
 
 .status-row {
   display: inline-flex;
@@ -185,6 +216,12 @@ legend {
   cursor: pointer;
 }
 
+  /******************************/
+ /******Attribute Selectors*****/
+/******************************/
+
+/****Container for results added through Javascript****/
+
 p[name="results"] {
   font-size: 2vw;
   width: 20vw;
@@ -193,6 +230,8 @@ p[name="results"] {
   text-decoration-color: #d277ab;
   align-self: center;
 }
+
+/****Widget Customization****/
 
 label[for="date"] {
   margin-right: 5px;
